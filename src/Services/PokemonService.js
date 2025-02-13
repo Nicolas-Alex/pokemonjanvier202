@@ -5,9 +5,14 @@ function fetchPokemons(){
 export default{
     fetchPokemons
 }
-function fetchPokmonByName(){
-    return URL.get ("'https://pokeapi.co/api/v2/pokemon/'+name");
+function fetchPokemonByName(){
+    return axios.get ('https://pokeapi.co/api/v2/pokemon/'+name);
 }
-function PokemonService(){
-    return URL.get (" 'https://pokeapi.co/api/v2/pokemon-species/'+name")
+}
+  function fetchPokemonSpeciesByName (name) {
+    return axios.get ('https://pokeapi.co/api/v2/pokemon')
+  }
+export default {
+    fetchPokemonByName
+
 }

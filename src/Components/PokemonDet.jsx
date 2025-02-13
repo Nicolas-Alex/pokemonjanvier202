@@ -1,7 +1,11 @@
 import { useEffect } from "react"
 import { BrowserRouter } from "react-router-dom"
+import {useParams} from "react-router-dom"
 
-const  = () => {
+const PokemonDetails= () => {
+    const {name} = useParams();
+    const [pokemon, setPokemon] = useState ({});
+     
     return <>
    <h1>PokemonDetails.jsx</h1>
     
@@ -11,12 +15,19 @@ const  = () => {
     </>
 }
 
+
 useEffect (() => {
-    function fetch PokmonsByName= await async 
+
+    function fetch PokemonsByName= await async 
 }
 catch (error){
 return("Informations du pokemon");
 }
+try{
+    const response = await PokemonService.fetchPokemonByName(name);
+    setPokemon ({...response.data, ...response.data}));
+} catch (error)
+  
 function Poke{
     useEffect
 }
