@@ -5,6 +5,7 @@ import './App.css'
 import "boostrap/dist/css/boostrap.min.css";
 import { BrowserRouter } from 'react-router-dom';
 import HomePage from './HomePage';
+import { Navbar } from "./Components/Navbar";
 
 function App() {}
   const [count, setCount] = useState(0)
@@ -14,8 +15,8 @@ function App() {}
     <BrowserRouter>
      <Routes>
       <Route path="/" element={<HomePage/>}></Route>
-      </Routes> 
-    </BrowserRouter>
-    </>;
+      </Routes>
+     
+    </BrowserRouter>;
 
 export default App;
